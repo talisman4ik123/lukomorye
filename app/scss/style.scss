@@ -1,0 +1,971 @@
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'icons';
+@import 'reset';
+@import 'global';
+@import 'slider';
+@import 'header';
+@import 'sauna-form';
+@import 'about-us';
+@import 'our-halls';
+@import 'advantages';
+@import 'discounts';
+@import 'consultation';
+@import 'reviews';
+@import 'sauna-map';
+@import 'footer';
+@import 'forms';
+
+@media (max-width: 1200px) {
+    .sauna-form {
+        &__form {
+            padding: 50px 40px 65px;
+        }
+        &__input {
+            max-width: 90%;
+        }
+        &__btn {
+            padding: 10px;
+            width: 100%;
+        }
+        &__legend {
+            font-size: 25px;
+        }
+        &__label {
+            font-size: 13px;
+        }
+    }
+    .sauna-map {
+        padding-bottom: 100px;
+        margin-bottom: 240px;
+        &__content {
+            padding: 25px 32px;
+            bottom: -200px;
+            left: 50px;
+            top: auto;
+            border: 1px solid $black;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .logo {
+        &__text {
+            font-size: 20px;
+        }
+    }
+    .booking__button {
+        padding: 8px 27px;
+    }
+    .menu {
+        &__item:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+    .consultation {
+        &__img {
+            display: none;
+        }
+        &__form {
+            margin: 0;
+        }
+        &__fieldset {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        &__legend {
+            margin-bottom: 15px;
+        }
+        &__group {
+            flex-direction: column;
+        }
+        &__label {
+            margin-right: 0;
+        }
+        &__subgroup {
+            margin-bottom: 30px;
+        }
+    }
+    .discounts-slider__text {
+        color: $black;
+    }
+    .watch-more__popup {
+        width: 80%;
+    }
+}
+
+@media (max-width: 950px) {
+
+    .logo {
+        margin-right: auto;
+        z-index: 21;
+    }
+
+    .header__top-booking {
+        z-index: 21;
+    }
+
+    .booking__link {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 1px solid white;
+        font-size: 0;
+        display: flex;
+        margin-right: 30px;
+        &::before {
+            font-size: 22px;
+            margin: auto;
+        }
+    }
+    .header {
+        .booking__button {
+            display: none;
+        }
+        .menu {
+            display: none;
+        }
+        .social {
+            display: none;
+        }
+        &__top {
+            display: flex;
+            justify-content: stretch;
+        }
+        &__burger {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 20;
+            padding: 100px 0px 30px 0px;
+            transition: left .3s ease 0s;
+            overflow: auto;
+            &::before {
+                content: '';
+                transition: left .3s ease 0s;
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 110px;
+                background-color: $green;
+            }
+            &--active {
+                left: 0;
+                &::before {
+                    left: 0;
+                }
+            }
+        }
+        .menu__icon {
+            display: block;
+            z-index: 25;
+            position: relative;
+            width: 40px;
+            height: 24px;
+            cursor: pointer;
+            margin-left: 10px;
+            & span, 
+            &::before, 
+            &::after {
+                position: absolute;
+                left: 0;
+                height: 10%;
+                width: 100%;
+                transition: all .5s ease 0s;
+                background-color: #fff;
+            }
+            &::before, 
+            &::after {
+                content: "";
+            }
+            &::before {
+                top: 0;
+            }
+            &::after {
+                bottom: 0;
+            }
+            & span {
+                top: 50%;
+                transform: scale(1) translate(0px, -50%);
+            }
+            &--active {
+                span {
+                    transform: scale(0) translate(0px, -50%);
+                }
+                &::before {
+                    top: 50%;
+                    transform: rotate(-45deg) translate(0px, -50%);
+                }
+                &::after {
+                    bottom: 50%;
+                    transform: rotate(45deg) translate(0px, 50%);
+                }
+            }
+        }
+    }
+
+    .header__burger {
+        color: $black;
+        font-family: Noto Sans;
+        &-tel {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            padding: 40px 30px;
+            box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+            border-radius: 5px;
+            border: 1px solid #F8F8F8;
+            margin-bottom: 50px;
+            .tel__link {
+                display: flex;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: $green;
+                margin-right: 30px;
+                &::before {
+                    margin: auto;
+                    font-size: 26px;
+                }
+            }
+            .tel__text {
+                font-size: 19px;
+                font-weight: 600;
+                line-height: 25px;
+            }
+            .tel__span {
+                font-size: 17px;
+                line-height: 22px;
+            }
+        }
+
+        .menu {
+            display: block;
+            padding: 0px 20px;
+            margin-bottom: 80px;
+            &__list {
+                flex-direction: column;
+            }
+            &__item {
+                margin-right: 0;
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgba(112, 135, 58, 0.6);
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+            &__link {
+                color: $black;
+                font-size: 20px;
+            }
+        }
+
+        &-address {
+            margin-bottom: 80px;
+            padding: 0px 20px;
+            .address__item {
+                display: flex;
+                &:not(:last-child) {
+                    margin-bottom: 25px;
+                }
+            }
+            .address__span {
+                margin-right: 10px;
+                &::before {
+                    margin: 0;
+                    font-size: 26px;
+                }
+            }
+            .address__text {
+                font-size: 16px;
+                line-height: 20px;
+                max-width: 350px;
+                span {
+                    font-weight: 600;
+                    font-size: 17px;
+                    line-height: 20px;
+                    white-space: nowrap;
+                }
+            }
+        }
+        &-btn {
+            padding: 0px 20px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .booking__button {
+            display: block;
+            background-color: $green;
+            max-width: 384px;
+            width: 100%;
+        }
+        .social {
+            display: block;
+            padding: 0px 20px;
+            &__list {
+                display: flex;
+                justify-content: center;
+            }
+            &__link {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+            &__item:not(:last-child) {
+                margin-right: 50px;
+            }
+            &__span {
+                &::before {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .header-content__h1 {
+        margin-bottom: 20px;
+    }
+
+    .sauna-form {
+        &__inner {
+            justify-content: center;
+        }
+        &-img {
+            display: none;
+        }
+        &__form {
+            width: 80%;
+            padding: 50px 60px 65px;
+        }
+        &__btn {
+            max-width: 90%;
+        }
+        &__input {
+            max-width: 90%;
+        }
+    }
+    .title {
+        font-size: 52px;
+    }
+    .about-us {
+        &-img {
+            display: none;
+        }
+        &__content {
+            width: 100%;
+            padding-right: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__text {
+            margin: 0 auto;
+            font-size: 15px;
+        }
+    }
+    .our-halls__title {
+        text-align: center;
+    }
+    .advantages__title {
+        text-align: center;
+    }
+
+    .discounts {
+        &__title {
+            text-align: center;
+        }
+        &-slider__item {
+            background-image: none;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            max-width: 380px;
+            margin: 0 10px;
+        }
+        &-slider__title {
+            font-size: 26px;
+            span {
+                font-size: 40px;
+                line-height: 20px;
+            }
+        }
+        &-slider__btn {
+            margin-bottom: 30px;
+            padding: 8px;
+        }
+    }
+    .discounts-img-media {
+        display: block;
+        margin-bottom: 30px;
+    }
+    .reviews {
+        &__btns {
+            max-width: 80%;
+            display: flex;
+            justify-content: center;
+            .reviews__btn:first-child, .reviews__btn:last-child {
+                padding: 8px;
+                width: 80%;
+            }
+        }
+    }
+    .reviews__title {
+        text-align: center;
+    }
+    .footer__inner {
+        padding: 30px 10px;
+    }
+    .footer__link {
+        font-size: 16px;
+    }
+    .footer__group {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .discounts__inner {
+        margin-bottom: 80px;
+    }
+    .advantages__inner {
+        margin-bottom: 100px;
+    }
+}
+
+
+
+
+@media (max-width: 751px) {
+    .header-content__h1 {
+        font-size: 51px;
+        line-height: 68px;
+        margin-bottom: 30px;
+    }
+    .offer {
+        &__legend {
+            font-size: 22px;
+            padding-right: 20px;
+        }
+        &__button {
+            font-size: 18px;
+            width: 90%;
+        }
+        &-input__group {
+            flex-direction: column;
+            margin: 0;
+        }
+        &__input {
+            margin-bottom: 30px;
+            width: 90%;
+        }
+        &__group {
+            width: 90%;
+        }
+    }
+    .discounts__title {
+        font-size: 36px;
+        line-height: 36px;
+    }
+    .discounts-slider__btn {
+        svg {
+            display: none;
+        }
+    }
+    .page__subtitle {
+        font-size: 17px;
+    }
+    .reviews__subtitle {
+        font-size: 18px;
+    }
+    .reviews__text, .page__text {
+        font-size: 14px;
+    }
+    .reviews__date, .page__date {
+        font-size: 12.5px;
+    }
+    .reviews__btns {
+        flex-direction: column;
+        align-items: center;
+        .reviews__btn:last-child{
+            margin: 0;
+        }
+        .reviews__btn:first-child {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+    .reviews__list {
+        margin-bottom: 35px;
+    }
+
+}
+
+@media (max-width: 650px) {
+    .slider-item {
+        margin: 0 auto;
+    }
+
+    .advantages {
+        &__span {
+            display: block;
+        }
+        &__text {
+            transition: all .3s;
+            transform: translateY(-50px);
+            opacity: 0;
+            max-height: 0;
+            pointer-events: none;
+        }
+        &__item--active {
+            .advantages__text {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto;
+                max-height: 200px;
+            }
+        }
+    }
+    .discounts__title {
+        font-size: 34px;
+        line-height: 34px;
+    }
+    .discounts-slider__item {
+        margin: 0 auto;
+    }
+    .title {
+        font-size: 46px;
+    }
+    .header {
+        margin-bottom: 80px;
+    }
+    .sauna-form {
+        margin-bottom: 80px;
+    }
+    .about-us {
+        margin-bottom: 80px;
+    }
+    .our-halls {
+        margin-bottom: 90px;
+    }
+    .discounts__inner {
+        margin-bottom: 90px;
+    }
+}
+
+@media (max-width: 601px) {
+    .header-content__h1 {
+        font-size: 40px;
+        line-height: 60px;
+    }
+    .header-content__list {
+        margin-bottom: 50px;
+    }
+    .header-content {
+        position: relative;
+    }
+    .header-content__btn {
+        position: absolute;
+        max-width: 420px;
+        width: 100%;
+        padding: 10px 15px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+    .header-content__item {
+        font-size: 20px;
+    }
+
+    .popup {
+        &__legend {
+            font-size: 22px;
+        }
+        &__input {
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
+        &__label {
+            font-size: 14px;
+        }
+        &__btn {
+            font-size: 18px;
+            padding: 9px;
+        }
+        &__text {
+            font-size: 14px;
+        }
+    }
+
+    .call-back {
+        &__legend {
+            max-width: 300px;
+        }
+        &__top {
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+    }
+
+    .tobook {
+        &-input__group {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+        &__input {
+            margin-right: 0;
+            margin-bottom: 25px;
+            padding-bottom: 3px;
+        }
+        &__group {
+            margin-top: 20px;
+        }
+    }
+
+    .sauna-form {
+        &__form {
+            width: 100%;
+            padding: 50px 50px 65px;
+        }
+        &__btn {
+            max-width: 100%;
+        }
+        &__input {
+            max-width: 100%;
+        }
+    }
+    .offer__legend {
+        margin-bottom: 20px;
+        line-height: 0.8;
+    }
+    .offer__top {
+        display: flex;
+        align-items: start;
+    }
+    .discounts__title {
+        font-size: 47px;
+    }
+    .discounts__title {
+        font-size: 32px;
+        line-height: 32px;
+    }
+    .watch-more__popup {
+        position: relative;
+        width: 90%;
+        padding-bottom: 80px;
+    }
+    .watch-more__list {
+        position: absolute;
+        bottom: 20px;
+        left: 36%;
+    }
+}
+
+@media (max-width: 551px) {
+    .discounts-slider__item {
+        margin: 0 10px;
+    }
+    .review-input__group {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .review__input {
+        margin-bottom: 35px;
+    }
+    .review__button {
+        padding: 7px;
+    }
+    .sauna-map__content {
+        left: 10px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 471px) {
+    .booking__link {
+        margin-right: 5px;
+    }
+    .logo__text {
+        font-size: 19px;
+    }
+    .logo__span {
+        font-size: 17px;
+    }
+    .header-content__h1 {
+        max-width: 380px;
+        font-size: 38px;
+        line-height: 60px;
+    }
+    .header-content__address {
+        max-width: 400px;
+    }
+
+    .popup {
+        &__legend {
+            font-size: 20px;
+        }
+        &__input {
+            &::placeholder {
+                font-size: 15px;
+            }
+        }
+        &__label {
+            font-size: 13px;
+        }
+        &__btn {
+            font-size: 16px;
+            padding: 7px;
+        }
+    }
+    .title {
+        font-size: 40px;
+    }
+    .about-us__text {
+        font-size: 14px;
+    }
+    .slick-arrow {
+        top: 104%;
+    }
+    .slick-next {
+        right: 35%;
+    }
+    .slick-prev {
+        left: 35%;
+    }
+    .slider {
+        padding: 0;
+    }
+    .discounts-slider__btn {
+        svg {
+            display: none;
+        }
+        padding: 6px;
+    }
+    .discounts__title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .discounts-slider__item {
+        margin: 0 10px;
+    }
+    .discounts-slider {
+        padding: 0 30px;
+    }
+    .consultation__subgroup {
+        max-width: 400px;
+    }
+    .consultation__label {
+        max-width: 400px;
+        text-align: left;
+    }
+    .page__text {
+        font-size: 12px;
+    }
+    .page__subtitle {
+        font-size: 15px;
+    }
+    .page__date {
+        font-size: 12px;
+    }
+    .watch-more__list {
+        left: 30px;
+    }
+    .watch-more__popup {
+        width: 95%;
+        padding: 30px 30px 80px;
+    }
+    .watch-more__top {
+        margin-bottom: 25px;
+    }
+    .review__top {
+        margin-bottom: 30px;
+    }
+    .review-stars__group {
+        .rating:not(:checked)>label {
+            width: 28px;
+            font-size: 28px;
+        }
+        .rating:not(:checked)>label:before {
+            font-size: 30px;
+        }
+        .review__span {
+            white-space: nowrap;
+        }
+        .rating {
+            width: 144px;
+        }
+    }
+    .sauna-map__content {
+        left: 0;
+        margin: 0 10px;
+        .sauna-map__btn {
+            padding: 8px 20px;
+        }
+        .social__link {
+            width: 50px;
+            height: 50px;
+        }
+        .social__item {
+            margin-bottom: 0;
+        }
+        .social__list {
+            margin-bottom: 50px;
+        }
+    }
+    .sauna-form, .about-us {
+        margin-bottom: 70px;
+    }
+    .our-halls, .discounts__inner {
+        margin-bottom: 150px;
+    }
+    .advantages__inner {
+        margin-bottom: 90px;
+    }
+}
+
+@media (max-width: 392px) {
+    .logo__text {
+        display: none;
+    }
+    .header__top-booking {
+        margin-right: 10px;
+    }
+    .header-content__h1 {
+        max-width: 320px;
+        font-size: 30px;
+        line-height: 52px;
+    }
+    .header-content__address, .header-content__item {
+        font-size: 18px;
+    }
+    .header-content__btn {
+        font-size: 16px;
+    }
+    .header__burger {
+        .address__text {
+            font-size: 14px;
+        }
+        .address__text span {
+            font-size: 16px;
+        }
+    }
+
+    .popup {
+        &__legend {
+            font-size: 19px;
+        }
+        &__btn {
+            font-size: 16px;
+            padding: 7px;
+            svg {
+                display: none;
+            }
+        }
+        &__text {
+            font-size: 13px;
+        }
+    }
+
+    .call-back {
+        &__legend {
+            max-width: 200px;
+        }
+        &__top {
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+    }
+
+    .tobook {
+        &__group {
+            margin-top: 0px;
+        }
+        &__legend {
+            max-width: 200px;
+        }
+        &__top {
+            align-items: stretch;
+        }
+    }
+
+   
+    .sauna-form {
+        &__form {
+            padding: 35px 50px 40px;
+        }
+        &__btn {
+            svg {
+                display: none;
+            }
+            padding: 7px;
+            font-size: 17px;
+        }
+        &__label {
+            font-size: 12.5px;
+        }
+        &__input {
+            &::placeholder {
+                font-size: 13px;
+            }
+        }
+        &__legend {
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+    }
+    .about-us__text {
+        font-size: 13px;
+    }
+    .title {
+        font-size: 38px;
+    }
+    .our-halls__title {
+        margin-bottom: 22px;
+    }
+    .discounts__title {
+        font-size: 28px;
+    }
+
+    .consultation {
+        &__legend {
+            font-size: 24px;
+        }
+        &__text {
+            font-size: 15px;
+        }
+        &__btn {
+            padding: 5px;
+            svg {
+                display: none;
+            }
+        }
+        &__label {
+            font-size: 13px;
+        }
+    }
+    .reviews__text {
+        font-size: 13px;
+    }
+    .reviews__btn {
+        svg {
+            display: none;
+        }
+    }
+    .sauna-map__content {
+        .sauna-map__btn {
+            padding: 7px;
+            svg {
+                display: none;
+            }
+        }
+    }
+}

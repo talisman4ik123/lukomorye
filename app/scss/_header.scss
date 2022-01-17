@@ -1,0 +1,118 @@
+.header {
+    background-image: url(../images/header-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin-bottom: 100px;
+    &__inner {
+        padding-top: 25px;
+        padding-bottom: 118px;
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 72px;
+        &-logo {
+            display: flex;
+        }
+        &--active {
+            position: fixed;
+        }
+    }
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-content {
+        &__h1 {
+            @extend %title;
+            font-size: 70px;
+            line-height: 86px;
+            color: white;
+            max-width: 667px;
+            margin-bottom: 7px;
+        }
+        &__address {
+            @extend %text;
+            font-size: 20px;
+            line-height: 27px;
+            color: white;
+            margin-bottom: 30px;
+        }
+        &__list {
+            margin-bottom: 35px;
+        }
+        &__item {
+            @extend %text;
+            font-size: 22px;
+            line-height: 30px;
+            color: white;
+        }
+        &__item:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        &__span {
+            font-weight: 700;
+        }
+        &__btn {
+            background-color: $green;
+            padding: 9px 70px 10px 69px;
+        }
+    }
+    &__burger {
+        display: none;
+    }
+}
+
+.logo {
+    &__text {
+        @extend %title;
+        font-size: 25px;
+        line-height: 31px;
+        color: white;   
+        margin-left: 15px;
+        margin-top: 3.5px;
+    }
+    &__span {
+        display: block;
+        @extend %title18;
+        line-height: 22px;
+        color: white;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+    }
+    &__item:not(:last-child) {
+        margin-right: 60px;
+    }
+    &__link {
+        padding: 2px;
+        @extend %text16;
+        line-height: 22px;
+        letter-spacing: 0.1;
+        color: white;
+    }
+}
+
+.booking {
+    &__link {
+        @extend %text16;
+        line-height: 22px;
+        color: white;
+        margin-bottom: 5px;
+    }
+    &__button {
+        display: block;
+        background-color: $orange;
+        padding: 9px 41px 10px 40px;
+    }
+}
+
+.menu__icon {
+    display: none;
+}

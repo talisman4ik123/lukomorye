@@ -1,0 +1,20 @@
+.footer {
+    background-color: $green;
+    &__inner {
+        padding: 45px 0px;
+    }
+    &__group {
+        max-width: 710px;
+        margin: 0 auto;
+        color: white;
+        @extend %text;
+        font-size: 20px;
+        line-height: 27px;
+    }
+    &__link {
+        color: white;
+        @extend %text;
+        font-size: 18px;
+        line-height: 27px;
+    }
+}

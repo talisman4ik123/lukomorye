@@ -1,0 +1,409 @@
+html,
+body {
+	height: 100%;
+	font-family: $fontFamilyText;
+	color: #000000;
+}
+
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.container{
+  max-width: ($maxWidthContainer - 30) + px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+%title {
+	font-family: $fontFamilyTitle;
+	color: $black;
+	line-height: 1;
+}
+
+%title60 {
+	@extend %title;
+	font-size: 60px;
+}
+
+%title28 {
+	@extend %title;
+	font-size: 28px;
+}
+
+%title24 {
+	@extend %title;
+	font-size: 24px;
+}
+
+%title18 {
+	@extend %title;
+	font-size: 18px;
+}
+
+%text {
+	font-family: $fontFamilyText;
+	color: $grey;
+}
+
+%text18 {
+	@extend %text;
+	font-size: 18px;
+	font-size: 1;
+}
+
+%text16 {
+	@extend %text;
+	font-size: 16px;
+}
+
+%text14 {
+	@extend %text;
+	font-size: 14px;
+}
+
+%textlh19 {
+	@extend %text14;
+	line-height: 19.07px;
+}
+
+%textlh20 {
+	@extend %text16;
+	line-height: 20.8px;
+}
+
+%textlh21 {
+	@extend %text16;
+	line-height: 21.6px;
+}
+
+%textlh24 {
+	@extend %text16;
+	line-height: 24px;
+}
+
+%textlh74 {
+	@extend %title60;
+	line-height: 74px;
+}
+
+.btn {
+	@extend %text18;
+	line-height: 170%;
+	color: white;
+	border-radius: 5px;
+}
+
+.subbtn {
+	@extend %text16;
+	font-weight: 600;
+	line-height: 100%;
+	letter-spacing: 0.02em;
+	color: white;
+	background-color: $orange;
+	border-radius: 5px;
+	padding: 9px 18px 10px 19px;
+}
+
+.arrow__svg {
+	margin-left: 15px;
+}
+
+.social {
+    &__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    &__link {
+        display: flex;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: $green;
+    }
+    &__span {
+        margin: auto;
+    }
+}
+
+.form {
+	&__input {
+		background-color: transparent;
+		border-bottom: 1px solid white;
+		padding: 5px 10px 5px 5px;
+		color: white;
+		@extend %text16;
+	}
+	&__input:-webkit-autofill {
+		transition: all 5000s ease-in-out;
+	}
+	&__input::placeholder {
+		@extend %text16;
+		line-height: 22px;
+		color: white;
+	}
+	&__legend {
+		@extend %title28;
+		line-height: 35px;
+		color: white;
+	}
+	&__label {
+		@extend %textlh19;
+		color: white;
+	}
+	&__link {
+		color: white;
+		text-decoration: underline;
+	}
+	&__checkbox {
+		margin-right: 10px;
+	}
+	&__btn {
+		background-color: white;
+		color: $green;
+		padding: 10px 143.5px;
+	}
+	&__svg {
+		margin-left: 10px;
+	}
+}
+
+.title {
+	@extend %textlh74;
+	letter-spacing: 0.03em;
+	color: $black;
+}
+
+._pc {
+	//pc link
+	a {
+		transition: color 0.3s ease;
+		&:focus {
+			outline: white solid 1px;
+		}
+		&:hover {
+			color: $orange;
+		}
+		&:active {
+			outline: $orange solid 1px;
+		}
+	}
+
+	.close-btn__group {
+		&:focus {
+			outline: $orange 1px solid;
+		}
+		&:active {
+			outline: none;
+		}
+	}
+
+	.popup__link {
+		&:focus {
+			outline: $orange 1px solid;
+		}
+	}
+
+	.social {
+		&__item {
+			will-change: transform;
+			transition: transform .3s ease;
+		}
+		&__item:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	.sauna-map__social {
+		.social__link:focus {
+			outline: $orange 2px solid;
+		}
+	}
+
+	//pc button
+	button {
+		transition-property: background-color, color, transform;
+		transition-duration: 300ms;
+		transition-timing-function: linear;
+		&:focus {
+			outline: white solid 1px;
+		}
+		&:active {
+			outline: none;
+			transform: translate(0, 10px);
+		}
+	}
+
+	.booking__button:hover {
+		background-color: $green;
+	}
+
+	.header-content__btn:hover {
+		background-color: $orange;
+	}
+
+	.review__textarea {
+		&:focus {
+			border-bottom: 1px solid $orange;
+		}
+	}
+
+	.slick-arrow {
+		will-change: transform;
+		transition: transform .4s ease;
+		&:focus {
+			outline: $orange 2px solid;
+		}
+		&:hover {
+			transform: scale(1.1);
+		}
+		&:active {
+			outline: none;
+		}
+	}
+
+	.popup__btn {
+		transition: all .3s;
+		&:hover {
+			background-color: $orange;
+		}
+		&:focus {
+			outline: 2px solid $orange;
+		}
+		&:active {
+			outline: none;
+		}
+	}
+
+	.review-stars__group {
+		label {
+			&:focus {
+				outline: 1px solid $orange;
+			}
+			&:active {
+				outline: none;
+			}
+		}
+	}
+	
+	.slider__btn, .discounts-slider__btn, .reviews__btn:first-child, .form__btn {
+		&:hover {
+			background-color: $orange;
+		}
+		&:focus {
+			outline: $orange 2px solid;
+		}
+		&:active {
+			outline: none;
+		}
+	}
+
+	.reviews__btn:last-child {
+		will-change: transform;
+	}
+
+	.reviews__btn:last-child {
+		&:focus {
+			border: 1px solid $orange;
+		}
+		&:hover {
+			transform: scale(1.05);
+		}
+		&:active {
+			transform: translate(10px, 0);
+			border: 1px solid #70873A;
+		}
+	}
+
+	.form__btn:hover {
+		color: white;
+		outline: none;
+		.arrow__svg-path {
+			fill: white;
+		}
+	}
+
+	.slider__subbtn {
+		&:hover {
+			border-color: transparent;
+		}
+		&::before,
+        &::after {
+            content: '';
+            position: absolute;
+            border: 3.5px solid transparent;
+            width: 0;
+            height: 0;
+        }
+        &::before {
+            top: 0;
+            left: 0;
+        }
+        &::after {
+            bottom: 0;
+            right: 0;
+        }
+        &:hover::after,
+        &:hover::before {
+            width: 100%;
+            height: 100%;
+        }
+        &:hover::before {
+            border-top-color: white;
+            border-right-color: white;
+            transition: 
+                width 0.25s ease-out,
+                height 0.25s ease-out 0.25s;
+        }
+        &:hover::after {
+            border-bottom-color: white;
+            border-left-color: white;
+            transition: 
+                border-color 0s ease-out 0.5s,
+                width 0.25s ease-out 0.5s,
+                height 0.25s ease-out 0.75s;
+        }
+	}
+
+	.arrow__svg-path {
+		transition: fill .3s ease;
+	}
+
+	.sauna-map__btn {
+		&:focus {
+			outline: $orange 2px solid;
+		}
+		&:hover {
+			background-color: $orange;
+		}
+	}
+
+	//pc input
+	input:focus {
+		border-bottom: 1px solid $orange;
+	}
+
+	//pc checkbox
+	.form__checkbox {
+		&:focus {
+			outline: $orange solid 1px;
+		}
+		&:active {
+			outline: none;
+		}
+	}
+}
+
+body._lock {
+    overflow: hidden;
+}

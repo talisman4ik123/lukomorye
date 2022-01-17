@@ -1,0 +1,36 @@
+.sauna-form {
+    position: relative;
+    margin-bottom: 100px;
+    &__inner {
+        display: flex;
+    }
+    &-img {
+        position: relative;
+        width: 50%;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__form {
+        background-color: $green;
+        padding: 50px 75px 65px;
+        width: 50%;
+    }
+    &__legend {
+        margin-bottom: 39px;
+    }
+    &__input {
+        display: block;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    &__btn {
+        margin-top: 40px;
+        padding: 9px 140px 10px;
+    }
+}

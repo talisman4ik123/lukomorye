@@ -1,0 +1,63 @@
+.consultation {
+    margin-bottom: 80px;
+    position: relative;
+    background: linear-gradient(90deg, #70873A 0%, #76B852 100%);;
+    &__inner {
+        position: relative;
+    }
+    &__form {
+        padding: 24px 0px 42px 0px;
+        margin-left: 320px;
+    }
+    &__img {
+        position: absolute;
+        width: 25%;
+        //height: 381px;
+        bottom: 0;
+        left: 0;
+    }
+    &___link {
+        display: inline;
+    }
+    &__legend {
+        margin-bottom: 5px;
+    }
+    &__text {
+        @extend %text16;
+        color: white;
+        opacity: 0.8;
+        line-height: 150%;
+        margin-bottom: 30px;
+    }
+    &__input {
+        width: 100%;
+        padding: 0px 10px 10px 5px;
+        margin-bottom: 30px;
+    }
+    &__group-input {
+        display: flex;
+        .consultation__input:first-child {
+            margin-right: 50px;
+        }
+    }
+    &__subgroup {
+        display: flex;
+        input {
+            margin-top: 3px;
+        }
+    }
+    &__label {
+        display: block;
+        max-width: 400px;
+        margin-right: 50px;
+    }
+    &__group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__btn {
+        padding: 8px;
+        width: 70%;
+    }
+}

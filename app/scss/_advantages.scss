@@ -1,0 +1,97 @@
+.advantages {
+    &__inner {
+        margin-bottom: 80px;
+    }
+
+    &__title {
+        @extend %title24;
+        line-height: 30px;
+        letter-spacing: 0.03em;
+        margin-bottom: 30px;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    &__item:first-child {
+        .advantages__img {
+            background-image: url(../images/icons/aqua.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__item:nth-child(2) {
+        .advantages__img {
+            background-image: url(../images/icons/chill-room.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__item:nth-child(3) {
+        .advantages__img {
+            background-image: url(../images/icons/eat.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__item:nth-child(4) {
+        .advantages__img {
+            background-image: url(../images/icons/music.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__item:nth-child(5) {
+        .advantages__img {
+            background-image: url(../images/icons/add.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__caption {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    &__subtitle {
+        @extend %title18;
+        line-height: 22px;
+        letter-spacing: 0.03em;
+        color: black;
+    }
+
+    &__img {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: $green;
+        margin-right: 15px;
+    }
+
+    &__text {
+        @extend %textlh21;
+        color: gray;
+    }
+
+    &__span {
+        margin-left: auto;
+        display: none;
+        transition: transform .3s;
+    }
+    &__span--active {
+        transform: rotate(180deg);
+    }
+    &__item {
+
+    }
+    &__item--active {
+
+    }
+}
