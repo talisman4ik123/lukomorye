@@ -1,4 +1,4 @@
-# Ссылка на сайт https://talisman4ik123.github.io/kniginya/dist/
+# Ссылка на сайт https://talisman4ik123.github.io/lukomorye/dist/
 
 **_Стек:_**
 
